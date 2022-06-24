@@ -1,0 +1,125 @@
+[
+  {
+    "race": {
+      "White": 1030,
+      "Black": 977,
+      "Asian": 989,
+      "Caucasian": 1013,
+      "NA": 991
+    },
+    "gender": {
+      "male": 1000,
+      "female": 1005,
+      "man": 1010,
+      "woman": 996,
+      "NA": 989
+    },
+    "hair_style": {
+      "straight": 1057,
+      "wavy": 989,
+      "curly": 993,
+      "kinky": 961,
+      "NA": 1000
+    },
+    "hair_color": {
+      "black": 847,
+      "white": 807,
+      "blond": 813,
+      "gray": 813,
+      "brown": 845,
+      "NA": 875
+    },
+    "hair_len": {
+      "short": 1258,
+      "long": 1246,
+      "middle": 1252,
+      "NA": 1244
+    },
+    "top": {
+      "suit": 485,
+      "shirt": 497,
+      "dress": 496,
+      "blouse": 523,
+      "tanktop": 506,
+      "coat": 490,
+      "jacket": 465,
+      "T-shirt": 535,
+      "jumper": 480,
+      "NA": 523
+    },
+    "top_color": {
+      "red": 527,
+      "orange": 541,
+      "yellow": 502,
+      "green": 509,
+      "blue": 496,
+      "violet": 449,
+      "black": 487,
+      "white": 487,
+      "NA": 1002
+    },
+    "bottom": {
+      "skirt": 804,
+      "trousers": 842,
+      "jeans": 795,
+      "shorts": 855,
+      "pants": 842,
+      "NA": 862
+    },
+    "bottom_color": {
+      "red": 466,
+      "orange": 450,
+      "yellow": 442,
+      "green": 422,
+      "blue": 495,
+      "violet": 452,
+      "black": 468,
+      "white": 472,
+      "NA": 1333
+    },
+    "footwear": {
+      "shoes": 827,
+      "sandals": 829,
+      "boots": 839,
+      "slippers": 852,
+      "sneakers": 840,
+      "NA": 813
+    },
+    "footwear_color": {
+      "red": 476,
+      "orange": 479,
+      "yellow": 493,
+      "green": 416,
+      "blue": 462,
+      "violet": 462,
+      "black": 454,
+      "white": 475,
+      "NA": 1283
+    },
+    "accessory": {
+      "hat": 451,
+      "belt": 386,
+      "handbag": 400,
+      "glasses": 403,
+      "scarf": 385,
+      "sunglasses": 420,
+      "gloves": 427,
+      "bracelet": 405,
+      "necklace": 451,
+      "ring": 431,
+      "earrings": 427,
+      "NA": 414
+    },
+    "accessory_color": {
+      "red": 505,
+      "orange": 563,
+      "yellow": 481,
+      "green": 522,
+      "blue": 525,
+      "violet": 459,
+      "black": 517,
+      "white": 526,
+      "NA": 902
+    }
+  }
+]
