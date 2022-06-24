@@ -2,12 +2,9 @@
 
 In the police force, a textual description of a perpetrator is sent to the officers via the computers in their police cars. Often, the description is hidden in amongst the other information about the crime. It is difficult for the officers to quickly glance at the screen and get mental picture of the perpetrator.
 
-The text is written by a human and is often transcribed from the 000 call; hence it is unstructured in nature. However, the description is short, direct, and much simpler than say the description of a character in a book. For example:
+The text is written by a human and is often transcribed from the 000 call; hence it is unstructured in nature. However, the description is short, direct, and much simpler than say the description of a character in a book. For example: “..... Desc: Caucasian Male, white shoes, blue jeans, black hoodie, brown backpack.".
 
-<aside>
-💡 “.....  Desc: Caucasian Male, white shoes, blue jeans, black hoodie, brown backpack."
-
-Our system reads the textual description and converts it into an image to reduce the cognitive load of the officers.
+The system reads the textual description and converts it into an image to reduce the cognitive load of the officers.
 
 # Approach in Machine Learning
 
@@ -19,7 +16,13 @@ In modern language, there are many ways to describe a person; hardcoded matching
 
 We udopt pretrained model, A Robustly Optimized BERT Pretraining Approach (roBERTa) [1].
 
-![plot](./modelfigure.png)
+1. Preprocessing the text
+2. Feed into roBERTa
+3. 1d covolution layer for classification, there are 13 appearance categories (top, acceccearies...etc) and categories has 35 classes (color, styles ..etc)
+
+Flask python package is used to expose our machine learning model as a REST API. However, Flask is not a complete production-ready server. Hence, we will use gunicorn, a python HTTP server, to expose our REST API.
+
+The model is delpoyed with docker and hosted in Google Cloud Service.
 
 # Contributions:
 
