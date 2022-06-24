@@ -17,6 +17,10 @@ In modern language, there are many ways to describe a person; hardcoded matching
 | ---------------- | ------------------- | --------------------------------------------- |
 | PyTorch          | Google Colaboratory | Flask, gunicorn, Docker, Google Cloud Service |
 
+We udopt pretrained model, A Robustly Optimized BERT Pretraining Approach (roBERTa) [1].
+
+![plot](./modelfigure.png)
+
 # Contributions:
 
 1. model/TransformerAppearanceClassifier.py
