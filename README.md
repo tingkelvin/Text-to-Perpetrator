@@ -27,12 +27,15 @@ The model is delpoyed with docker and hosted in Google Cloud Service.
 # Contributions:
 
 1. model/TransformerAppearanceClassifier.py
+
    This is the architecture of the machine learning model, where I utilise the pre-trained model RoBERTa for text classification tasks.
 
 2. utils.py
+
    This is the until script for the data-preprocessing, testing, training, validating and model initialisation.
 
 3. train.py & test.py
+
    This is the training and testing script that with customized arguments:
    --input: Dataset Directory
    --dataset: Name of the dataset
@@ -44,7 +47,9 @@ The model is delpoyed with docker and hosted in Google Cloud Service.
    --google_colab: enable to run on google colab
 
 4. modelDriver.ipynb
+
    The main driver script to run the model.
 
 5. Tdeployment/flask/
+
    Contain the flask web application, trained model, dependencies, configuration and Dockerfile for deployment.
