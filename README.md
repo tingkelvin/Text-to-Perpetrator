@@ -1,74 +1,43 @@
-# Master Projects
-
-## All Agendas, Meeting Minutes and other documents is in the "Documents" folder
-
-
-Github Reading Instructions:
-
-- Dataset is generated programmatically and all related files is in the "data_generator" folder
-    - All Categories is defined "Labels.csv"
-    - The "Test.py" is the main function to generate data
-    - The actual generated data is put inside the folder with name starting as "partern5cat13subcat"
-- The machine learning model is put inside the "NLP" folder
-- The image generation assets (3D models) and code are put inside the "image generation" folder 
-
-Clients:
-
-- Thomas Rowntree
-- thomas.rowntree@adelaide.edu.au
-
-[Real life Example](https://www.notion.so/Real-life-Example-ea95140f59764bf3916c6270621bdaae)
-    
-
-Members: 
-
-- a1829445, Kelvin, Ting
-- a1808891, Pham Gia “Alan” Nghi
-- a1805827, Kelin “Colin” Zhu
-
 # Project Description
 
-Text to Perpetrator: visualising suspect description (Team 15)
+In the police force, a textual description of a perpetrator is sent to the officers via the computers in their police cars. Often, the description is hidden in amongst the other information about the crime. It is difficult for the officers to quickly glance at the screen and get mental picture of the perpetrator.
 
-Area:  Natural Language Processing, Machine Learning
-
-Client:  Thomas Rowntree
-
-In the police force, a textual description of a perpetrator is sent to the officers via the computers in their police cars.  Often, the description is hidden in amongst the other information about the crime.  It is difficult for the officers to quickly glance at the screen and get mental picture of the perpetrator. 
-
-The text is written by a human and is often transcribed from the 000 call; hence it is unstructured in nature.  However,  the  description  is  short,  direct,  and  much  simpler  than  say  the  description  of a character in a book. For example: 
+The text is written by a human and is often transcribed from the 000 call; hence it is unstructured in nature. However, the description is short, direct, and much simpler than say the description of a character in a book. For example:
 
 <aside>
 💡 “.....  Desc: Caucasian Male, white shoes, blue jeans, black hoodie, brown backpack."
 
-</aside>
+Our system reads the textual description and converts it into an image to reduce the cognitive load of the officers.
 
-`Note this will a mostly be a natural language processing project as opposed to an image generation project.  The system can start off simple with hard coded pattern matching rules or it gain complexity with machine learning or deep learning.`
+# Approach in Machine Learning
 
-The system doesn't need to be photo realistic.  For demonstration, the system could run on a web server such that the user can supply textual description in the GET request and get an image back.
+In modern language, there are many ways to describe a person; hardcoded matching rules might not be effective in classifying text. Therefore, a machine learning algorithm might be more robust as it learns the general rules from the dataset. The software used in machine learning is shown in following:
 
-# Project Grade Range
+| Machine Learning | Development         | Deployment                                    |
+| ---------------- | ------------------- | --------------------------------------------- |
+| PyTorch          | Google Colaboratory | Flask, gunicorn, Docker, Google Cloud Service |
 
-Pitch Presentation (week 4 tutorials) `10%`
+# Contributions:
 
-Business Case (end of week 4) `5%`
+1. model/TransformerAppearanceClassifier.py
+   This is the architecture of the machine learning model, where I utilise the pre-trained model RoBERTa for text classification tasks.
 
-Online Project Management (from week 3) `10%`
+2. utils.py
+   This is the until script for the data-preprocessing, testing, training, validating and model initialisation.
 
-Iteration 1 milestone (end of week 6) `15%`
+3. train.py & test.py
+   This is the training and testing script that with customized arguments:
+   --input: Dataset Directory
+   --dataset: Name of the dataset
+   --epoch: Number of epochs
+   --learning_rate: Learning rate
+   --batch_size: Numbers of batches
+   --train: is training required?
+   --tensorboard: enable to log tensorboard
+   --google_colab: enable to run on google colab
 
-Iteration 2 milestone (end of week 10) `15%`
+4. modelDriver.ipynb
+   The main driver script to run the model.
 
-Testing plan (week 10) `5%`
-
-Final Presentation + Demo (week 13 tutorials/lectures) `20%`
-
-Final Report (end of week 13)`20% - This is a hurdle`
-
-# Resources
-
----
-
-[Build software better, together](https://github.cs.adelaide.edu.au/MCI-projects-2022/Team-15)
-
-Team Github
+5. Tdeployment/flask/
+   Contain the flask web application, trained model, dependencies, configuration and Dockerfile for deployment.
