@@ -24,6 +24,9 @@ Flask python package is used to expose our machine learning model as a REST API.
 
 The model is delpoyed with docker and hosted in Google Cloud Service.
 
+The following link is the API entry point:
+https://mci-75aymfmqxq-km.a.run.app/predict?text="RP states male is out front of his address, throwing glass bottles at passing cars/pedestrians. Appears drug affected. Male described as cauc, wearing a grey hoodie, black track pants, addidas sneakers, red cap."
+
 # Contributions:
 
 1. model/TransformerAppearanceClassifier.py
@@ -37,13 +40,21 @@ The model is delpoyed with docker and hosted in Google Cloud Service.
 3. train.py & test.py
 
    This is the training and testing script that with customized arguments:
+
    --input: Dataset Directory
+
    --dataset: Name of the dataset
+
    --epoch: Number of epochs
+
    --learning_rate: Learning rate
+
    --batch_size: Numbers of batches
+
    --train: is training required?
+
    --tensorboard: enable to log tensorboard
+
    --google_colab: enable to run on google colab
 
 4. modelDriver.ipynb
