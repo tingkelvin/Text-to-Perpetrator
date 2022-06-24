@@ -24,9 +24,29 @@ Flask python package is used to expose our machine learning model as a REST API.
 
 The model is delpoyed with docker and hosted in Google Cloud Service.
 
-The following link is the API entry point:
+The following link is the API entry point with an exmaple:
+
+"RP states male is out front of his address, throwing glass bottles at passing cars/pedestrians. Appears drug affected. Male described as cauc, wearing a grey hoodie, black track pants, addidas sneakers, red cap."
 
 https://mci-75aymfmqxq-km.a.run.app/predict?text="RP%20states%20male%20is%20out%20front%20of%20his%20address,%20throwing%20glass%20bottles%20at%20passing%20cars/pedestrians.%20Appears%20drug%20affected.%20Male%20described%20as%20cauc,%20wearing%20a%20grey%20hoodie,%20black%20track%20pants,%20addidas%20sneakers,%20red%20cap."
+
+Result:
+
+{
+"accessory":"cap",
+"accessory_color":"red",
+"bottom":"track pants",
+"bottom_color":"black",
+"footwear":"sneakers",
+"footwear_color":"black",
+"gender":"male",
+"hair_color":"NA",
+"hair_len":"NA",
+"hair_style":"NA",
+"race":"caucasian",
+"top":"hoodie",
+"top_color":"gray"
+}
 
 # Contributions:
 
